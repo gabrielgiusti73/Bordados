@@ -1,0 +1,64 @@
+object Form24: TForm24
+  Left = 128
+  Height = 240
+  Top = 252
+  Width = 991
+  Caption = 'Form24'
+  ClientHeight = 240
+  ClientWidth = 991
+  LCLVersion = '2.0.0.3'
+  object Button1: TButton
+    Left = 512
+    Height = 23
+    Top = 88
+    Width = 94
+    Caption = 'Ingresar'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 272
+    Height = 16
+    Top = 88
+    Width = 157
+    Caption = 'Ingresar codigo de cliente :'
+    Font.Height = -13
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 448
+    Height = 21
+    Top = 88
+    Width = 47
+    TabOrder = 1
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    SQL.Strings = (
+      'select * from precios'
+    )
+    Params = <>
+    left = 600
+    top = 160
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    left = 544
+    top = 168
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 360
+    top = 168
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = ZQuery1
+    left = 440
+    top = 168
+  end
+end

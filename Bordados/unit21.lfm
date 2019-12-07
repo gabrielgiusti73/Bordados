@@ -1,0 +1,66 @@
+object Form21: TForm21
+  Left = 177
+  Height = 95
+  Top = 206
+  Width = 353
+  Caption = 'Form21'
+  ClientHeight = 95
+  ClientWidth = 353
+  LCLVersion = '2.0.0.3'
+  object Edit1: TEdit
+    Left = 160
+    Height = 21
+    Top = 34
+    Width = 43
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 216
+    Height = 23
+    Top = 34
+    Width = 101
+    Caption = 'Imprimir Planilla'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 19
+    Top = 32
+    Width = 145
+    Caption = 'Numero de planilla :'
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 352
+    top = 32
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = ZQuery1
+    left = 400
+    top = 32
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    SQL.Strings = (
+      ''
+      ''
+      'SELECT * FROM BORDADOS'
+    )
+    Params = <>
+    left = 448
+    top = 32
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    left = 496
+    top = 32
+  end
+end

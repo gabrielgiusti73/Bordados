@@ -1,0 +1,694 @@
+object Form8: TForm8
+  Left = 488
+  Height = 1059
+  Top = 68
+  Width = 2051
+  Caption = 'Produccion'
+  ClientHeight = 1059
+  ClientWidth = 2051
+  Color = clInfoBk
+  DesignTimePPI = 168
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -23
+  Font.Name = 'Bodoni Bd BT'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
+  object DBGrid1: TDBGrid
+    Left = 9
+    Height = 635
+    Top = 345
+    Width = 2023
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <    
+      item
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -11
+        Font.Name = 'Bodoni Bd BT'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'FECHA DE INICIO'
+        Width = 164
+        FieldName = 'Fechainicio'
+      end    
+      item
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -11
+        Font.Name = 'Bodoni Bd BT'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'HORA DE INICIO'
+        Width = 164
+        FieldName = 'HORADEINICIO'
+        DisplayFormat = 'hh:mm'
+      end    
+      item
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -11
+        Font.Name = 'Bodoni Bd BT'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'COD DE CLIENTE'
+        Width = 164
+        FieldName = 'Codcliente'
+      end    
+      item
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -11
+        Font.Name = 'Bodoni Bd BT'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'COD DE BORDADO'
+        Width = 164
+        FieldName = 'CodBordado'
+      end    
+      item
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -11
+        Font.Name = 'Bodoni Bd BT'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = 12
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'DESCRIPCION'
+        Width = 164
+        FieldName = 'Descripcion'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'PRECIO UNITARIO'
+        Width = 164
+        FieldName = 'Precio_unitario'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'CANTIDAD'
+        Width = 164
+        FieldName = 'Cantidad'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'IMPORTE TOTAL'
+        Width = 164
+        FieldName = 'Importe_Total'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'NUMERO DE PEDIDO'
+        Width = 164
+        FieldName = 'Numpedido'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'ORDEN DE CLIENTE'
+        Width = 164
+        FieldName = 'Ordencliente'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'HORA DE FIN'
+        Width = 164
+        FieldName = 'HORADECIERRE'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Height = -10
+        Title.Font.Name = 'Bodoni Bd BT'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'FECHA DE CIERRE'
+        Width = 164
+        FieldName = 'FECHADECIERRE'
+      end>
+    DataSource = DataSource8
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -19
+    TitleFont.Name = 'Bodoni Bd BT'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 686
+    Height = 42
+    Top = 994
+    Width = 534
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 42
+    ClientWidth = 534
+    DataSource = DataSource8
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = DBNavigator1Click
+    Options = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 1904
+    Height = 42
+    Top = 994
+    Width = 130
+    Caption = 'Salir'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 570
+    Height = 35
+    Top = 37
+    Width = 224
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DefaultToday = True
+    DateOrder = doNone
+    ButtonWidth = 40
+    NumGlyphs = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 3
+    Text = '4/11/2018'
+    DataField = 'Fechainicio'
+    DataSource = DataSource8
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 570
+    Height = 35
+    Top = 140
+    Width = 219
+    DataField = 'Codcliente'
+    DataSource = DataSource8
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 27
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DBComboBox2: TDBComboBox
+    Left = 570
+    Height = 35
+    Top = 192
+    Width = 219
+    DataField = 'CodBordado'
+    DataSource = DataSource8
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 27
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DBEdit1: TDBEdit
+    Left = 1034
+    Height = 35
+    Top = 37
+    Width = 140
+    DataField = 'Descripcion'
+    DataSource = DataSource8
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 80
+    ParentFont = False
+    TabOrder = 6
+  end
+  object DBEdit2: TDBEdit
+    Left = 1034
+    Height = 35
+    Top = 89
+    Width = 140
+    DataField = 'Precio_unitario'
+    DataSource = DataSource8
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 7
+  end
+  object DBEdit3: TDBEdit
+    Left = 1034
+    Height = 35
+    Top = 140
+    Width = 140
+    DataField = 'Cantidad'
+    DataSource = DataSource8
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 8
+  end
+  object DBEdit4: TDBEdit
+    Left = 1034
+    Height = 35
+    Top = 266
+    Width = 140
+    DataField = 'Importe_Total'
+    DataSource = DataSource8
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 9
+  end
+  object DBEdit5: TDBEdit
+    Left = 1447
+    Height = 35
+    Top = 38
+    Width = 140
+    DataField = 'Numpedido'
+    DataSource = DataSource8
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 10
+  end
+  object DBEdit6: TDBEdit
+    Left = 1447
+    Height = 35
+    Top = 91
+    Width = 140
+    DataField = 'Ordencliente'
+    DataSource = DataSource8
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 11
+  end
+  object DBEdit7: TDBEdit
+    Left = 1447
+    Height = 35
+    Top = 142
+    Width = 140
+    DataField = 'HORADECIERRE'
+    DataSource = DataSource8
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 12
+  end
+  object DBDateEdit2: TDBDateEdit
+    Left = 1447
+    Height = 35
+    Top = 189
+    Width = 182
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DefaultToday = True
+    DateOrder = doNone
+    ButtonWidth = 40
+    NumGlyphs = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 13
+    Text = '1/11/2019'
+    DataField = 'FECHADECIERRE'
+    DataSource = DataSource8
+  end
+  object DBEdit8: TDBEdit
+    Left = 570
+    Height = 35
+    Top = 89
+    Width = 140
+    DataField = 'HORADEINICIO'
+    DataSource = DataSource8
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 14
+  end
+  object Label1: TLabel
+    Left = 301
+    Height = 27
+    Top = 37
+    Width = 168
+    Caption = 'Fecha de inicio :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 301
+    Height = 27
+    Top = 89
+    Width = 160
+    Caption = 'Hora de inicio :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 301
+    Height = 27
+    Top = 140
+    Width = 190
+    Caption = 'Codigo de cliente :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 301
+    Height = 27
+    Top = 187
+    Width = 210
+    Caption = 'Codigo de bordado :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 854
+    Height = 27
+    Top = 37
+    Width = 136
+    Caption = 'Descripcion :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 828
+    Height = 27
+    Top = 91
+    Width = 168
+    Caption = 'Precio unitario :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 884
+    Height = 27
+    Top = 140
+    Width = 105
+    Caption = 'Cantidad :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 847
+    Height = 27
+    Top = 266
+    Width = 151
+    Caption = 'Importe total :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 1211
+    Height = 27
+    Top = 37
+    Width = 204
+    Caption = 'Numero de pedido :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 1211
+    Height = 27
+    Top = 89
+    Width = 190
+    Caption = 'Orden del cliente :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 1211
+    Height = 27
+    Top = 142
+    Width = 132
+    Caption = 'Hora de fin :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 1211
+    Height = 27
+    Top = 192
+    Width = 172
+    Caption = 'Fecha de cierre :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button2: TButton
+    Left = 1034
+    Height = 44
+    Top = 196
+    Width = 140
+    Caption = 'Calcular'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 15
+  end
+  object ZQuery8: TZQuery
+    Connection = Form1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM produccion '
+      ''
+      ''
+    )
+    ParamCheck = False
+    Params = <>
+    left = 191
+    top = 980
+  end
+  object DataSource8: TDataSource
+    DataSet = ZQuery8
+    left = 98
+    top = 980
+  end
+end

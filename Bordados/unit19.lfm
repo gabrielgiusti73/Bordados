@@ -1,0 +1,523 @@
+object Form19: TForm19
+  Left = 340
+  Height = 1220
+  Top = 23
+  Width = 2135
+  Caption = 'REMITOS'
+  ClientHeight = 1220
+  ClientWidth = 2135
+  Color = clInfoBk
+  DesignTimePPI = 168
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
+  object DBNavigator1: TDBNavigator
+    Left = 742
+    Height = 33
+    Top = 700
+    Width = 553
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 33
+    ClientWidth = 553
+    DataSource = DataSource19
+    Options = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 252
+    Height = 345
+    Top = 336
+    Width = 1558
+    AutoFillColumns = True
+    Color = clMoneyGreen
+    Columns = <    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.Height = -14
+        Title.Caption = 'Remito'
+        Width = 136
+        FieldName = 'Numremito'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.Height = -14
+        Title.Caption = 'Fecha'
+        Width = 136
+        FieldName = 'Fecharemito'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Mes'
+        Width = 136
+        FieldName = 'Mes'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.Height = -14
+        Title.Caption = 'Descripcion'
+        Width = 136
+        FieldName = 'Descripcion'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.Height = -14
+        Title.Caption = 'Cantidad'
+        Width = 136
+        FieldName = 'Cantidad'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.Height = -14
+        Title.Caption = 'Precio unitario'
+        Width = 136
+        FieldName = 'Preciounitario'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 9
+        MaxSize = 9
+        Title.Alignment = taCenter
+        Title.Font.Height = -16
+        Title.Caption = 'Total'
+        Width = 136
+        FieldName = 'Total'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.Height = -12
+        Title.Caption = 'Codigo de cliente'
+        Width = 136
+        FieldName = 'codcli'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Font.Height = -12
+        Title.Caption = 'Estado'
+        Width = 136
+        FieldName = 'Estado'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Ano'
+        Width = 136
+        FieldName = 'ano'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Ordencliente'
+        Width = 143
+        FieldName = 'Ordencliente'
+      end>
+    DataSource = DataSource19
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBEdit1: TDBEdit
+    Left = 462
+    Height = 38
+    Top = 98
+    Width = 75
+    DataField = 'Numremito'
+    DataSource = DataSource19
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBEdit2: TDBEdit
+    Left = 1323
+    Height = 38
+    Top = 229
+    Width = 133
+    DataField = 'Descripcion'
+    DataSource = DataSource19
+    CharCase = ecNormal
+    MaxLength = 240
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBEdit3: TDBEdit
+    Left = 425
+    Height = 38
+    Top = 229
+    Width = 65
+    DataField = 'Cantidad'
+    DataSource = DataSource19
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DBEdit4: TDBEdit
+    Left = 686
+    Height = 38
+    Top = 229
+    Width = 61
+    DataField = 'Preciounitario'
+    DataSource = DataSource19
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Left = 259
+    Height = 30
+    Top = 98
+    Width = 194
+    Caption = 'Numero de remito :'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 756
+    Height = 30
+    Top = 98
+    Width = 169
+    Caption = 'Fecha de remito :'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 1190
+    Height = 30
+    Top = 229
+    Width = 120
+    Caption = 'Descripcion:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 313
+    Height = 30
+    Top = 229
+    Width = 100
+    Caption = 'Cantidad :'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 518
+    Height = 30
+    Top = 229
+    Width = 157
+    Caption = 'Precio unitario :'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 798
+    Height = 30
+    Top = 229
+    Width = 60
+    Caption = 'Total :'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBEdit5: TDBEdit
+    Left = 868
+    Height = 38
+    Top = 229
+    Width = 140
+    DataField = 'Total'
+    DataSource = DataSource19
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 6
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 938
+    Height = 38
+    Top = 98
+    Width = 180
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DefaultToday = True
+    DateOrder = doDMY
+    ButtonWidth = 40
+    NumGlyphs = 1
+    MaxLength = 10
+    OnChange = DBDateEdit1Change
+    ParentFont = False
+    TabOrder = 7
+    Text = '06/11/2018'
+    DataField = 'Fecharemito'
+    DataSource = DataSource19
+  end
+  object Label7: TLabel
+    Left = 1498
+    Height = 30
+    Top = 229
+    Width = 71
+    Caption = 'Estado:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 560
+    Height = 30
+    Top = 98
+    Width = 119
+    Caption = 'Cod.Cliente:'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBEdit6: TDBEdit
+    Left = 686
+    Height = 38
+    Top = 98
+    Width = 61
+    DataField = 'codcli'
+    DataSource = DataSource19
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 8
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 1596
+    Height = 38
+    Top = 229
+    Width = 119
+    DataField = 'Estado'
+    DataSource = DataSource19
+    ItemHeight = 30
+    Items.Strings = (
+      'Pagado'
+      'Impago'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Button1: TButton
+    Left = 1036
+    Height = 37
+    Top = 229
+    Width = 131
+    Caption = 'Calcular'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Label9: TLabel
+    Left = 1148
+    Height = 30
+    Top = 98
+    Width = 52
+    Caption = 'Mes :'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox2: TDBComboBox
+    Left = 1204
+    Height = 38
+    Top = 98
+    Width = 163
+    DataField = 'Mes'
+    DataSource = DataSource19
+    ItemHeight = 30
+    Items.Strings = (
+      'Enero'
+      'Febrero'
+      'Marzo'
+      'Abril'
+      'Mayo'
+      'Junio'
+      'Julio'
+      'Agosto'
+      'Septiembre'
+      'Octubre'
+      'Noviembre'
+      'Diciembre'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 11
+  end
+  object Label10: TLabel
+    Left = 1386
+    Height = 30
+    Top = 98
+    Width = 53
+    Caption = 'Ano :'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 742
+    Height = 30
+    Top = 1176
+    Width = 553
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 30
+    ClientWidth = 553
+    DataSource = DataSource1
+    Options = []
+    ParentFont = False
+    TabOrder = 12
+  end
+  object DBGrid2: TDBGrid
+    Left = 259
+    Height = 294
+    Top = 854
+    Width = 1554
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Label11: TLabel
+    Left = 924
+    Height = 62
+    Top = 14
+    Width = 179
+    Caption = 'Remitos'
+    Font.Height = -47
+    Font.Style = [fsBold, fsItalic, fsUnderline]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 924
+    Height = 62
+    Top = 770
+    Width = 174
+    Caption = 'Pedidos'
+    Font.Height = -47
+    Font.Style = [fsBold, fsItalic, fsUnderline]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox3: TDBComboBox
+    Left = 1442
+    Height = 38
+    Top = 98
+    Width = 140
+    DataField = 'ano'
+    DataSource = DataSource19
+    ItemHeight = 30
+    Items.Strings = (
+      '2018'
+      '2019'
+      '2020'
+      '2021'
+      '2022'
+      '2023'
+    )
+    MaxLength = 0
+    OnChange = DBComboBox3Change
+    ParentFont = False
+    TabOrder = 14
+  end
+  object DBEdit7: TDBEdit
+    Left = 1708
+    Height = 38
+    Top = 98
+    Width = 140
+    DataField = 'Ordencliente'
+    DataSource = DataSource19
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 15
+  end
+  object Label13: TLabel
+    Left = 1610
+    Height = 30
+    Top = 98
+    Width = 86
+    Caption = 'Orden C.'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DataSource19: TDataSource
+    DataSet = ZQuery19
+    left = 70
+    top = 383
+  end
+  object ZQuery19: TZQuery
+    Connection = Form1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from remitos order by numremito'
+    )
+    Params = <>
+    left = 70
+    top = 467
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    AutoCalcFields = False
+    Active = True
+    SQL.Strings = (
+      'select * from pedidos'
+    )
+    Params = <>
+    left = 96
+    top = 751
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    left = 63
+    top = 830
+  end
+end

@@ -1,0 +1,9 @@
+object Form14: TForm14
+  Left = 20
+  Height = 245
+  Top = 298
+  Width = 1181
+  Caption = 'Pedidos'
+  OnCreate = FormCreate
+  LCLVersion = '2.0.0.3'
+end

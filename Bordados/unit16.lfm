@@ -1,0 +1,195 @@
+object Form16: TForm16
+  Left = 856
+  Height = 322
+  Top = 123
+  Width = 344
+  Align = alTop
+  Caption = 'CALCULADORA'
+  ClientHeight = 322
+  ClientWidth = 344
+  FormStyle = fsSystemStayOnTop
+  Position = poDesktopCenter
+  LCLVersion = '2.0.0.4'
+  object igual: TButton
+    Left = 277
+    Height = 91
+    Top = 192
+    Width = 43
+    Caption = '='
+    OnClick = igualClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button8: TButton
+    Left = 277
+    Height = 88
+    Top = 84
+    Width = 43
+    Caption = 'C'
+    OnClick = Button8Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Button16: TButton
+    Left = 216
+    Height = 36
+    Top = 248
+    Width = 45
+    Caption = '+'
+    OnClick = suma
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Button15: TButton
+    Left = 217
+    Height = 36
+    Top = 192
+    Width = 45
+    Caption = '-'
+    OnClick = suma
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Button14: TButton
+    Left = 216
+    Height = 36
+    Top = 136
+    Width = 45
+    Caption = '*'
+    OnClick = suma
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Button13: TButton
+    Left = 216
+    Height = 36
+    Top = 84
+    Width = 45
+    Caption = '/'
+    OnClick = suma
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Button12: TButton
+    Left = 152
+    Height = 36
+    Top = 248
+    Width = 45
+    Caption = '.'
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Button11: TButton
+    Left = 153
+    Height = 36
+    Top = 192
+    Width = 45
+    Caption = '3'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Button10: TButton
+    Left = 152
+    Height = 36
+    Top = 136
+    Width = 45
+    Caption = '6'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 8
+  end
+  object Button9: TButton
+    Left = 152
+    Height = 36
+    Top = 84
+    Width = 45
+    Caption = '9'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Button7: TButton
+    Left = 89
+    Height = 36
+    Top = 192
+    Width = 45
+    Caption = '2'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Button6: TButton
+    Left = 88
+    Height = 36
+    Top = 136
+    Width = 45
+    Caption = '5'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 11
+  end
+  object Button5: TButton
+    Left = 88
+    Height = 36
+    Top = 84
+    Width = 45
+    Caption = '8'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 12
+  end
+  object Button4: TButton
+    Left = 23
+    Height = 36
+    Top = 248
+    Width = 109
+    Caption = '0'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Button3: TButton
+    Left = 24
+    Height = 36
+    Top = 192
+    Width = 45
+    Caption = '1'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 14
+  end
+  object Button2: TButton
+    Left = 23
+    Height = 36
+    Top = 136
+    Width = 45
+    Caption = '4'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 15
+  end
+  object Button1: TButton
+    Left = 23
+    Height = 36
+    Top = 84
+    Width = 45
+    Caption = '7'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 16
+  end
+  object eddisplay: TEdit
+    Left = 23
+    Height = 41
+    Top = 16
+    Width = 297
+    BidiMode = bdRightToLeft
+    Font.Height = -27
+    ParentBidiMode = False
+    OnChange = eddisplayChange
+    ParentFont = False
+    TabOrder = 17
+    Text = '0'
+  end
+end

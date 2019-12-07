@@ -1,0 +1,91 @@
+object Form13: TForm13
+  Left = 872
+  Height = 341
+  Top = 169
+  Width = 828
+  HorzScrollBar.Page = 765
+  VertScrollBar.Page = 185
+  AllowDropFiles = True
+  AlphaBlend = True
+  AutoScroll = True
+  AutoSize = True
+  Caption = 'IMPRESION DE PEDIDOS POR CLIENTE'
+  ClientHeight = 341
+  ClientWidth = 828
+  Color = clInfoBk
+  DesignTimePPI = 168
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
+  object Edit1: TEdit
+    Left = 462
+    Height = 38
+    Top = 145
+    Width = 140
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 644
+    Height = 40
+    Top = 145
+    Width = 121
+    Caption = 'BUSCAR'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 14
+    Height = 35
+    Top = 145
+    Width = 414
+    Caption = 'INGRESE EL NOMBRE DEL CLIENTE :'
+    Font.Color = clCaptionText
+    Font.Height = 35
+    Font.Name = '@Adobe Fan Heiti Std B'
+    Font.Quality = fqAntialiased
+    ParentColor = False
+    ParentFont = False
+  end
+  object DataSource13: TDataSource
+    DataSet = ZQuery13
+    left = 154
+    top = 210
+  end
+  object ZQuery13: TZQuery
+    SQL.Strings = (
+      'select * from pedidos'
+    )
+    Params = <>
+    left = 56
+    top = 210
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 238
+    top = 210
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = ZQuery13
+    left = 336
+    top = 210
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    left = 658
+    top = 236
+  end
+  object ZQuery1: TZQuery
+    SQL.Strings = (
+      'select * from pedidos'
+    )
+    Params = <>
+    left = 742
+    top = 236
+  end
+end

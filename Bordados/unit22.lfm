@@ -1,0 +1,186 @@
+object Form22: TForm22
+  Left = 693
+  Height = 555
+  Top = 258
+  Width = 1381
+  Caption = 'Precios'
+  ClientHeight = 555
+  ClientWidth = 1381
+  DesignTimePPI = 168
+  LCLVersion = '2.0.6.0'
+  object DBNavigator1: TDBNavigator
+    Left = 490
+    Height = 44
+    Top = 448
+    Width = 422
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 44
+    ClientWidth = 422
+    DataSource = DataSource1
+    Options = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 402
+    Height = 266
+    Top = 154
+    Width = 602
+    Color = clWindow
+    Columns = <    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Codigo'
+        FieldName = 'Codcliente'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Cliente'
+        FieldName = 'Cliente'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Bordado'
+        FieldName = 'Bordado'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Precio'
+        FieldName = 'precio'
+      end>
+    DataSource = DataSource1
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 383
+    Height = 38
+    Top = 56
+    Width = 100
+    Caption = 'Cliente :'
+    Font.Height = -28
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 516
+    Height = 38
+    Top = 58
+    Width = 175
+    DataField = 'Cliente'
+    DataSource = DataSource1
+    ItemHeight = 30
+    Items.Strings = (
+      'Armando lio'
+      'Bewiki'
+      'Cocomiel'
+      'Picolo'
+      'Pilim'
+      'Romina'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBEdit1: TDBEdit
+    Left = 864
+    Height = 38
+    Top = 58
+    Width = 140
+    DataField = 'Bordado'
+    DataSource = DataSource1
+    CharCase = ecNormal
+    MaxLength = 40
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBEdit2: TDBEdit
+    Left = 1180
+    Height = 38
+    Top = 60
+    Width = 140
+    DataField = 'precio'
+    DataSource = DataSource1
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Label2: TLabel
+    Left = 738
+    Height = 38
+    Top = 58
+    Width = 92
+    Caption = 'Matriz :'
+    Font.Height = -28
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 1052
+    Height = 38
+    Top = 60
+    Width = 91
+    Caption = 'Precio :'
+    Font.Height = -28
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 98
+    Height = 38
+    Top = 56
+    Width = 102
+    Caption = 'Codigo :'
+    Font.Height = -28
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBEdit3: TDBEdit
+    Left = 238
+    Height = 38
+    Top = 56
+    Width = 98
+    DataField = 'Codcliente'
+    DataSource = DataSource1
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    left = 644
+    top = 518
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from precios order by Bordado'
+    )
+    Params = <>
+    left = 728
+    top = 518
+  end
+end

@@ -1,0 +1,435 @@
+object Form2: TForm2
+  Left = 777
+  Height = 1071
+  Top = 280
+  Width = 1785
+  AutoSize = True
+  Caption = 'Ordenes de Pedidos'
+  ClientHeight = 1071
+  ClientWidth = 1785
+  Color = clInfoBk
+  DesignTimePPI = 168
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
+  object Button1: TButton
+    Left = 1624
+    Height = 46
+    Top = 1008
+    Width = 133
+    Caption = 'Salir'
+    Color = clRed
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBComboBox2: TDBComboBox
+    Left = 464
+    Height = 38
+    Top = 93
+    Width = 117
+    DataField = 'Codcliente'
+    DataSource = DataSource2
+    ItemHeight = 30
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Label7: TLabel
+    Left = 206
+    Height = 31
+    Top = 93
+    Width = 191
+    Caption = 'Codigo de cliente :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Tcantidad: TDBEdit
+    Left = 1013
+    Height = 38
+    Top = 100
+    Width = 140
+    DataField = 'Cantidad'
+    DataSource = DataSource2
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 1018
+    Height = 38
+    Top = 284
+    Width = 210
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doDMY
+    ButtonWidth = 40
+    NumGlyphs = 1
+    MaxLength = 10
+    ParentFont = False
+    TabOrder = 3
+    Text = '01/10/2018'
+    DataField = 'Fechapedido'
+    DataSource = DataSource2
+  end
+  object Ttotal: TDBEdit
+    Left = 1018
+    Height = 38
+    Top = 220
+    Width = 140
+    DataField = 'ImporteTotal'
+    DataSource = DataSource2
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Tprecio: TDBEdit
+    Left = 1018
+    Height = 38
+    Top = 158
+    Width = 140
+    DataField = 'Precio_unitario'
+    DataSource = DataSource2
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DBEdit3: TDBEdit
+    Left = 458
+    Height = 38
+    Top = 280
+    Width = 140
+    DataField = 'Ordencliente'
+    DataSource = DataSource2
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 6
+  end
+  object DBEdit2: TDBEdit
+    Left = 458
+    Height = 38
+    Top = 33
+    Width = 140
+    DataField = 'Numpedido'
+    DataSource = DataSource2
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 7
+  end
+  object DBEdit1: TDBEdit
+    Left = 458
+    Height = 38
+    Top = 215
+    Width = 140
+    DataField = 'Codbordado'
+    DataSource = DataSource2
+    CharCase = ecNormal
+    MaxLength = 32
+    ParentFont = False
+    TabOrder = 8
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 458
+    Height = 38
+    Top = 156
+    Width = 259
+    DataField = 'Ncliente'
+    DataSource = DataSource2
+    ItemHeight = 30
+    Items.Strings = (
+      'Armando lio'
+      'Cocomiel'
+      'Bewiki'
+      'Picolo'
+      'Pilim'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Label8: TLabel
+    Left = 794
+    Height = 31
+    Top = 284
+    Width = 181
+    Caption = 'Fecha de pedido :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 794
+    Height = 31
+    Top = 163
+    Width = 159
+    Caption = 'Precio unitario :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 794
+    Height = 31
+    Top = 102
+    Width = 104
+    Caption = 'Cantidad :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 201
+    Height = 31
+    Top = 285
+    Width = 181
+    Caption = 'Orden de cliente :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 201
+    Height = 31
+    Top = 35
+    Width = 194
+    Caption = 'Numero de pedido'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 201
+    Height = 31
+    Top = 217
+    Width = 211
+    Caption = 'Codigo de bordado :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 201
+    Height = 31
+    Top = 156
+    Width = 82
+    Caption = 'Cliente :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 84
+    Height = 630
+    Top = 364
+    Width = 1624
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Numpedido'
+        Width = 142
+        FieldName = 'Numpedido'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'CODCLIENTE'
+        Width = 142
+        FieldName = 'Codcliente'
+      end    
+      item
+        Alignment = taCenter
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Razon social'
+        Width = 142
+        FieldName = 'Ncliente'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Codbordado'
+        Width = 142
+        FieldName = 'Codbordado'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Ordencliente'
+        Width = 142
+        FieldName = 'Ordencliente'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Articulo'
+        Width = 142
+        FieldName = 'Articulo'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Cantidad'
+        Width = 142
+        FieldName = 'Cantidad'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Precio_unitario'
+        Width = 142
+        FieldName = 'Precio_unitario'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'ImporteTotal'
+        Width = 142
+        FieldName = 'ImporteTotal'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Fechapedido'
+        Width = 142
+        FieldName = 'Fechapedido'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Situacion'
+        Width = 149
+        FieldName = 'Situacion'
+      end>
+    DataSource = DataSource2
+    ParentFont = False
+    TabOrder = 10
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 630
+    Height = 33
+    Top = 1022
+    Width = 415
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 33
+    ClientWidth = 415
+    DataSource = DataSource2
+    Options = []
+    ParentFont = False
+    TabOrder = 11
+  end
+  object Label9: TLabel
+    Left = 794
+    Height = 31
+    Top = 226
+    Width = 145
+    Caption = 'Importe total :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 794
+    Height = 31
+    Top = 40
+    Width = 91
+    Caption = 'Articulo :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBEdit4: TDBEdit
+    Left = 1018
+    Height = 38
+    Top = 37
+    Width = 140
+    DataField = 'Articulo'
+    DataSource = DataSource2
+    CharCase = ecNormal
+    MaxLength = 40
+    ParentFont = False
+    TabOrder = 12
+  end
+  object Label11: TLabel
+    Left = 1251
+    Height = 31
+    Top = 40
+    Width = 105
+    Caption = 'Situacion :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox3: TDBComboBox
+    Left = 1377
+    Height = 38
+    Top = 37
+    Width = 175
+    DataField = 'Situacion'
+    DataSource = DataSource2
+    ItemHeight = 30
+    Items.Strings = (
+      'En espera'
+      'En produccion'
+      'Terminado'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Button2: TButton
+    Left = 1195
+    Height = 33
+    Top = 220
+    Width = 131
+    Caption = 'Calcular'
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 14
+  end
+  object DataSource2: TDataSource
+    DataSet = ZQuery2
+    left = 1400
+    top = 233
+  end
+  object ZQuery2: TZQuery
+    SQL.Strings = (
+      'select * from pedidos order by numpedido'
+    )
+    Params = <>
+    left = 1400
+    top = 84
+  end
+end

@@ -1,0 +1,156 @@
+object Form18: TForm18
+  Left = -173
+  Height = 709
+  Top = 271
+  Width = 1257
+  Align = alBottom
+  Caption = 'IMPRESION DE REMITOS'
+  ClientHeight = 709
+  ClientWidth = 1257
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 128
+    Top = 0
+    Width = 1264
+    BevelColor = clCream
+    BevelOuter = bvNone
+    ClientHeight = 128
+    ClientWidth = 1264
+    Color = 10116159
+    ParentColor = False
+    TabOrder = 5
+    object Label2: TLabel
+      Left = 8
+      Height = 19
+      Top = 56
+      Width = 155
+      Caption = 'Numero de remito:'
+      Font.Color = clCaptionText
+      Font.Height = -16
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 560
+      Height = 33
+      Top = 10
+      Width = 116
+      Caption = 'Remitos'
+      Font.Color = clWindow
+      Font.Height = -27
+      Font.Style = [fsBold, fsItalic, fsUnderline]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Button3: TButton
+      Left = 328
+      Height = 22
+      Top = 54
+      Width = 64
+      Caption = 'Leer'
+      OnClick = Button3Click
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 543
+    Top = 128
+    Width = 1257
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource18
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 472
+    Height = 25
+    Top = 680
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource18
+    Options = []
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 244
+    Height = 21
+    Top = 55
+    Width = 63
+    Caption = 'Buscar'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 176
+    Height = 21
+    Top = 54
+    Width = 45
+    OnChange = Edit1Change
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 408
+    Height = 21
+    Top = 55
+    Width = 67
+    Caption = 'Imprimir'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object ZQuery18: TZQuery
+    Connection = Form1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from remitos'
+    )
+    Params = <>
+    left = 984
+    top = 40
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 1040
+    top = 40
+  end
+  object DataSource18: TDataSource
+    DataSet = ZQuery18
+    left = 860
+    top = 35
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = ZQuery18
+    OnCheckEOF = frDBDataSet1CheckEOF
+    left = 824
+    top = 35
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    SQL.Strings = (
+      'select sum(total) from remitos'
+    )
+    Params = <>
+    left = 929
+    top = 32
+  end
+end

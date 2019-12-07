@@ -1,0 +1,62 @@
+object Form17: TForm17
+  Left = 18
+  Height = 525
+  Top = 203
+  Width = 1240
+  Caption = 'Form17'
+  ClientHeight = 0
+  ClientWidth = 0
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.0.3'
+  object Chart1: TChart
+    Left = 236
+    Height = 200
+    Top = 242
+    Width = 300
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+  end
+  object DbChartSource1: TDbChartSource
+    DataSource = DataSource1
+    OnGetItem = DbChartSource1GetItem
+    left = 256
+    top = 94
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    left = 353
+    top = 108
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    SQL.Strings = (
+      'Select * from pedidos  where Ncliente = "Picolo"'
+    )
+    Params = <>
+    left = 406
+    top = 132
+  end
+  object ListChartSource1: TListChartSource
+    left = 161
+    top = 40
+  end
+end

@@ -1,0 +1,77 @@
+object Form23: TForm23
+  Left = 230
+  Height = 317
+  Top = 295
+  Width = 947
+  Caption = 'Form23'
+  ClientHeight = 317
+  ClientWidth = 947
+  DesignTimePPI = 168
+  LCLVersion = '2.0.6.0'
+  object Button1: TButton
+    Left = 588
+    Height = 40
+    Top = 126
+    Width = 164
+    Caption = 'Ingresar'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 168
+    Height = 31
+    Top = 126
+    Width = 277
+    Caption = 'Ingresar codigo de cliente :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 476
+    Height = 38
+    Top = 126
+    Width = 82
+    ParentFont = False
+    TabOrder = 1
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 280
+    top = 238
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = ZQuery1
+    left = 389
+    top = 238
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    left = 553
+    top = 238
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'Select * from cobranzas'
+    )
+    Params = <>
+    left = 644
+    top = 238
+  end
+  object ZQuery2: TZQuery
+    Connection = Form1.ZConnection1
+    SQL.Strings = (
+      'select sum(importe) from cobranzas'
+    )
+    Params = <>
+    left = 179
+    top = 319
+  end
+end

@@ -1,0 +1,21 @@
+ZQuery1.active:=false;
+ZQuery1.sql.Clear;
+ZQuery1.SQL.text:='select * from pedidos where codcliente = :codcliente and Situacion ="En espera" ';
+ZQuery1.Params.ParamByName('codcliente').AsString := combobox1.Text;
+ZQuery1.ExecSQL ;
+ZQuery1.Active:=true;        
+
+
+ ZQuery1.active:=false;
+ZQuery1.sql.Clear;
+ZQuery1.SQL.text:='select * from pedidos where codcliente = :codcliente ';
+ZQuery1.Params.ParamByName('codcliente').AsString := combobox1.Text;
+ZQuery1.ExecSQL ;
+ZQuery1.Active:=true  
+
+
+ ZQuery1.active:=false;
+ZQuery1.sql.Clear;
+ZQuery1.SQL.text:='select * from pedidos';
+ZQuery1.ExecSQL ;
+ZQuery1.Active:=true   

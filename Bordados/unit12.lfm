@@ -1,0 +1,488 @@
+object Form12: TForm12
+  Left = 387
+  Height = 1038
+  Top = 120
+  Width = 2026
+  Caption = 'Cobranzas'
+  ClientHeight = 1038
+  ClientWidth = 2026
+  Color = clInfoBk
+  DesignTimePPI = 168
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -23
+  Font.Name = 'Bodoni Bd BT'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
+  object DBGrid1: TDBGrid
+    Left = 42
+    Height = 616
+    Top = 350
+    Width = 1946
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha de Cobro'
+        Width = 210
+        FieldName = 'Fechacobro'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Codigo de Cliente'
+        Width = 210
+        FieldName = 'Codcliente'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Cliente'
+        Width = 210
+        FieldName = 'Cliente'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Forma de pago'
+        Width = 210
+        FieldName = 'Forma'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Banco'
+        Width = 210
+        FieldName = 'Banco'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Numero de Cheque'
+        Width = 210
+        FieldName = 'Numcheque'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Importe'
+        Width = 210
+        FieldName = 'Importe'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha de Pago'
+        Width = 210
+        FieldName = 'Fpago'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Caption = 'Estado del cheque'
+        Width = 211
+        FieldName = 'Estado'
+      end>
+    DataSource = DataSource12
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -23
+    TitleFont.Name = 'Bodoni Bd BT'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 672
+    Height = 35
+    Top = 980
+    Width = 565
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 35
+    ClientWidth = 565
+    DataSource = DataSource12
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Options = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 546
+    Height = 35
+    Top = 56
+    Width = 175
+    DataField = 'Codcliente'
+    DataSource = DataSource12
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 27
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBComboBox2: TDBComboBox
+    Left = 994
+    Height = 35
+    Top = 56
+    Width = 175
+    DataField = 'Banco'
+    DataSource = DataSource12
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 27
+    Items.Strings = (
+      'Santander Rio'
+      'Frances'
+      'Itau'
+      'HSBC'
+      'Credicop'
+      'Nacion'
+      'Provincia'
+      'ICBC'
+      'Patagonia'
+      'Galicia'
+      'Macro'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBEdit1: TDBEdit
+    Left = 994
+    Height = 35
+    Top = 144
+    Width = 140
+    DataField = 'Numcheque'
+    DataSource = DataSource12
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DBEdit2: TDBEdit
+    Left = 994
+    Height = 35
+    Top = 224
+    Width = 140
+    DataField = 'Importe'
+    DataSource = DataSource12
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 1480
+    Height = 35
+    Top = 56
+    Width = 180
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 40
+    NumGlyphs = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 6
+    DataField = 'Fechacobro'
+    DataSource = DataSource12
+  end
+  object DBDateEdit2: TDBDateEdit
+    Left = 1480
+    Height = 35
+    Top = 145
+    Width = 180
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 40
+    NumGlyphs = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 7
+    DataField = 'Fpago'
+    DataSource = DataSource12
+  end
+  object Label1: TLabel
+    Left = 313
+    Height = 27
+    Top = 56
+    Width = 224
+    Caption = 'Codigo de Clliente :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 803
+    Height = 27
+    Top = 56
+    Width = 171
+    Caption = 'Banco emisor :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 761
+    Height = 27
+    Top = 145
+    Width = 225
+    Caption = 'Numero de cheque :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 873
+    Height = 27
+    Top = 229
+    Width = 107
+    Caption = 'Importe :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 1237
+    Height = 27
+    Top = 56
+    Width = 231
+    Caption = 'Fecha de cobranza :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 1237
+    Height = 27
+    Top = 145
+    Width = 182
+    Caption = 'Fecha de pago :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 327
+    Height = 27
+    Top = 229
+    Width = 189
+    Caption = 'Forma de Pago :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox3: TDBComboBox
+    Left = 546
+    Height = 35
+    Top = 224
+    Width = 175
+    DataField = 'Forma'
+    DataSource = DataSource12
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 27
+    Items.Strings = (
+      'Efectivo'
+      'Cheque'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 8
+  end
+  object Label8: TLabel
+    Left = 413
+    Height = 27
+    Top = 145
+    Width = 97
+    Caption = 'Cliente :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox4: TDBComboBox
+    Left = 546
+    Height = 35
+    Top = 144
+    Width = 175
+    DataField = 'Cliente'
+    DataSource = DataSource12
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 27
+    Items.Strings = (
+      'Armando lio'
+      'Cocomiel'
+      'Bewiki'
+      'Picolo'
+      'Pilim'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Label9: TLabel
+    Left = 1237
+    Height = 27
+    Top = 229
+    Width = 223
+    Caption = 'Estado del cheque :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox5: TDBComboBox
+    Left = 1475
+    Height = 35
+    Top = 224
+    Width = 175
+    DataField = 'Estado'
+    DataSource = DataSource12
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 27
+    Items.Strings = (
+      'Pagado'
+      'Cobrado'
+      'Vencido'
+      'Rechazado'
+      'Recuperado'
+      'Vista'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 10
+  end
+  object DataSource12: TDataSource
+    DataSet = ZQuery1
+    left = 271
+    top = 224
+  end
+  object ZQuery1: TZQuery
+    Connection = Form1.ZConnection1
+    SQL.Strings = (
+      'select * from Cobranzas'
+    )
+    ParamCheck = False
+    Params = <>
+    left = 287
+    top = 168
+  end
+end

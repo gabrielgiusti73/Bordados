@@ -1,0 +1,222 @@
+object Form9: TForm9
+  Left = 419
+  Height = 1057
+  Top = 112
+  Width = 2046
+  Caption = 'Gastos'
+  ClientHeight = 1057
+  ClientWidth = 2046
+  Color = clInactiveCaption
+  DesignTimePPI = 168
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
+  object DBGrid1: TDBGrid
+    Left = 70
+    Height = 742
+    Top = 224
+    Width = 1904
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Fecha del gasto'
+        Width = 462
+        FieldName = 'Fechagasto'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Gasto'
+        Width = 462
+        FieldName = 'Gasto'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Concepto'
+        Width = 462
+        FieldName = 'Concepto'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 350
+        Title.Alignment = taCenter
+        Title.Caption = 'Importe'
+        Width = 463
+        FieldName = 'Importe'
+      end>
+    DataSource = DataSource9
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 784
+    Height = 35
+    Top = 994
+    Width = 399
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 35
+    ClientWidth = 399
+    DataSource = DataSource9
+    Options = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 506
+    Height = 38
+    Top = 154
+    Width = 215
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 40
+    NumGlyphs = 1
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 2
+    Text = '28/10/2018'
+    DataField = 'Fechagasto'
+    DataSource = DataSource9
+  end
+  object DBEdit1: TDBEdit
+    Left = 863
+    Height = 38
+    Top = 154
+    Width = 196
+    DataField = 'Gasto'
+    DataSource = DataSource9
+    CharCase = ecNormal
+    MaxLength = 80
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBEdit2: TDBEdit
+    Left = 1587
+    Height = 38
+    Top = 154
+    Width = 96
+    DataField = 'Importe'
+    DataSource = DataSource9
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Label1: TLabel
+    Left = 298
+    Height = 31
+    Top = 154
+    Width = 171
+    Caption = 'Fecha del gasto :'
+    Color = clGradientInactiveCaption
+    Font.Height = -23
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label2: TLabel
+    Left = 1477
+    Height = 31
+    Top = 154
+    Width = 92
+    Caption = 'Importe :'
+    Color = clGradientInactiveCaption
+    Font.Color = clWindowText
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label3: TLabel
+    Left = 766
+    Height = 31
+    Top = 154
+    Width = 70
+    Caption = 'Gasto :'
+    Color = clGradientInactiveCaption
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label4: TLabel
+    Left = 1111
+    Height = 31
+    Top = 154
+    Width = 109
+    Caption = 'Concepto :'
+    Font.Height = -23
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 1239
+    Height = 38
+    Top = 154
+    Width = 156
+    DataField = 'Concepto'
+    DataSource = DataSource9
+    ItemHeight = 30
+    Items.Strings = (
+      'Edesur'
+      'Celular'
+      'Nafta'
+      'Repuesto'
+      'Mecanico'
+      'Supermercado'
+      'Ferreteria'
+      'Verduleria'
+      'Carniceria'
+      'Lubricentro'
+      'Peajes'
+      'Sueldos'
+      'Prestamos'
+      'Gastos bancarios'
+      'Salidas'
+    )
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Label5: TLabel
+    Left = 896
+    Height = 62
+    Top = 28
+    Width = 149
+    Caption = 'Gastos'
+    Font.Height = -47
+    Font.Style = [fsBold, fsItalic, fsUnderline]
+    ParentColor = False
+    ParentFont = False
+  end
+  object ZQuery9: TZQuery
+    Connection = Form1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM GASTOS'
+    )
+    Params = <>
+    left = 252
+    top = 994
+  end
+  object DataSource9: TDataSource
+    DataSet = ZQuery9
+    left = 140
+    top = 994
+  end
+end

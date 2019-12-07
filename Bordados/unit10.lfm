@@ -1,0 +1,111 @@
+object Form10: TForm10
+  Left = 59
+  Height = 524
+  Top = 104
+  Width = 1161
+  Caption = 'Registro de clientes'
+  ClientHeight = 524
+  ClientWidth = 1161
+  Color = clInactiveCaption
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.0.4'
+  object DBGrid1: TDBGrid
+    Left = 40
+    Height = 376
+    Top = 88
+    Width = 1088
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'CODIGO DE CLIENTE'
+        Width = 211
+        FieldName = 'Codcliente'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'RAZON SOCIAL'
+        Width = 211
+        FieldName = 'Ncliente'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'DIRECCION'
+        Width = 211
+        FieldName = 'Direccion'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'TELEFONO'
+        Width = 211
+        FieldName = 'Telefono'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'E-mail'
+        Width = 212
+        FieldName = 'Email'
+      end>
+    DataSource = DataSource10
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Bodoni Bd BT'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -13
+    TitleFont.Name = 'Bodoni Bd BT'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 400
+    Height = 25
+    Top = 488
+    Width = 304
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 304
+    DataSource = DataSource10
+    Options = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 488
+    Height = 33
+    Top = 16
+    Width = 112
+    Caption = 'Clientes'
+    Font.Height = -27
+    Font.Style = [fsBold, fsItalic, fsUnderline]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DataSource10: TDataSource
+    DataSet = ZQuery10
+    left = 184
+    top = 480
+  end
+  object ZQuery10: TZQuery
+    Connection = Form1.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM CLIENTES'
+    )
+    Params = <>
+    left = 120
+    top = 480
+  end
+end
